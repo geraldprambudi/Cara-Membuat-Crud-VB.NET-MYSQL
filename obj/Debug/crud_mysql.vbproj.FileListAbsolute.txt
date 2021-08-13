@@ -1,0 +1,12 @@
+C:\Users\gerald prambudi\source\repos\crud_mysql\bin\Debug\crud_mysql.exe.config
+C:\Users\gerald prambudi\source\repos\crud_mysql\bin\Debug\crud_mysql.exe
+C:\Users\gerald prambudi\source\repos\crud_mysql\bin\Debug\crud_mysql.pdb
+C:\Users\gerald prambudi\source\repos\crud_mysql\bin\Debug\crud_mysql.xml
+C:\Users\gerald prambudi\source\repos\crud_mysql\obj\Debug\crud_mysql.vbprojAssemblyReference.cache
+C:\Users\gerald prambudi\source\repos\crud_mysql\obj\Debug\crud_mysql.Form1.resources
+C:\Users\gerald prambudi\source\repos\crud_mysql\obj\Debug\crud_mysql.Resources.resources
+C:\Users\gerald prambudi\source\repos\crud_mysql\obj\Debug\crud_mysql.vbproj.GenerateResource.cache
+C:\Users\gerald prambudi\source\repos\crud_mysql\obj\Debug\crud_mysql.vbproj.CoreCompileInputs.cache
+C:\Users\gerald prambudi\source\repos\crud_mysql\obj\Debug\crud_mysql.exe
+C:\Users\gerald prambudi\source\repos\crud_mysql\obj\Debug\crud_mysql.xml
+C:\Users\gerald prambudi\source\repos\crud_mysql\obj\Debug\crud_mysql.pdb
