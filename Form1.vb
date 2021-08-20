@@ -9,7 +9,7 @@ Public Class Form1
     'Membuat Koneksi
     Sub Koneksi()
         ' Memanggil database yaitu nama database kita adalah db_universitas
-        MyDB = "Driver={MySQL ODBC 8.0 ANSI Driver};Database=kampus;Server=localhost;uid=root"
+        MyDB = "Driver={MySQL ODBC 8.0 ANSI Driver};Database=db_universitas;Server=localhost;uid=root"
         Conn = New OdbcConnection(MyDB)
         If Conn.State = ConnectionState.Closed Then Conn.Open()
     End Sub
@@ -189,6 +189,26 @@ Public Class Form1
             ' namun kalau tulisannya BATAL maka kita panggil KondisiAwal()
         Else
             Call KondisiAwal()
+        End If
+    End Sub
+    ' Fitur Search Data
+    Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles TextBox5.TextChanged
+        ' kita panggil Koneksi 
+        Call Koneksi()
+        ' kita buat sqlnya, kita panggil semua table mahasiswa, yang mana hanya nim yang kita masukin aja pada textbox5 yang akan tampil
+        Cmd = New OdbcCommand("SELECT * FROM mahasiswa WHERE nim like '%" & TextBox5.Text & "%'", Conn)
+        Rd = Cmd.ExecuteReader
+        Rd.Read()
+        ' Jika yang kita masukan ada nim-nya maka
+        If Rd.HasRows Then
+            ' Kita panggil koneksi
+            Call Koneksi()
+            '  kita buat sqlnya, kita panggil semua table mahasiswa, yang mana hanya nim yang kita masukin aja pada textbox5 yang akan tampil
+            Da = New OdbcDataAdapter("SELECT * FROM mahasiswa WHERE nim like '%" & TextBox5.Text & "%'", Conn)
+            Ds = New DataSet
+            Da.Fill(Ds, "ketemu")
+            DataGridView1.DataSource = Ds.Tables("ketemu")
+            DataGridView1.ReadOnly = True
         End If
     End Sub
 End Class
